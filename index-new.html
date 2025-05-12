@@ -2,71 +2,135 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>شهادة حضور</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شهادة حضور دورة تدريبية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* الأنماط الأساسية */
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Tajawal', Arial, sans-serif;
       background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-    }
-    .certificate {
-      background: #fff;
-      width: 800px;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      position: relative;
-      text-align: center;
-    }
-    .certificate h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
       color: #333;
     }
-    .certificate h2 {
+    
+    .certificate-container {
+      background-color: white;
+      width: 100%;
+      max-width: 800px;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      position: relative;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+    }
+    
+    /* التنسيقات النصية */
+    .certificate-title {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #2c3e50;
+      font-weight: 700;
+    }
+    
+    .certificate-subtitle {
       font-size: 20px;
       color: #007B8F;
+      margin: 15px 0;
+      font-weight: 600;
+    }
+    
+    .certificate-text {
+      font-size: 18px;
       margin: 10px 0;
+      line-height: 1.6;
     }
-    .certificate p {
-      font-size: 16px;
-      margin: 5px 0;
+    
+    .participant-name {
+      font-size: 24px;
+      color: #e74c3c;
+      margin: 20px 0;
+      font-weight: 700;
+      padding: 10px;
+      border-bottom: 2px dashed #007B8F;
+      display: inline-block;
     }
-    .certificate .logos {
+    
+    /* تنسيقات الشعارات */
+    .logos-container {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
+      justify-content: space-around;
+      align-items: center;
+      margin: 30px 0;
     }
-    .certificate .logos img {
-      height: 60px;
+    
+    .institute-logo {
+      max-height: 80px;
+      max-width: 150px;
+      object-fit: contain;
     }
-    .certificate .watermark {
+    
+    /* الخلفية المائية */
+    .watermark {
       position: absolute;
-      left: 0;
-      bottom: 0;
+      opacity: 0.1;
       width: 200px;
-      opacity: 0.2;
+      bottom: 20px;
+      left: 20px;
+    }
+    
+    /* التذييل */
+    .certificate-footer {
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      font-size: 16px;
+      color: #7f8c8d;
+    }
+    
+    /* التأكد من التوافق مع RTL */
+    *[dir="rtl"] {
+      direction: rtl;
+      unicode-bidi: embed;
     }
   </style>
 </head>
 <body>
-  <div class="certificate">
-    <div class="logos">
-      <img src="logo1.png" alt="شعار 1">
-      <img src="logo2.png" alt="شعار 2">
+  <div class="certificate-container">
+    <div class="logos-container">
+      <!-- استبدل بمسارات الصور الفعلية -->
+      <img class="institute-logo" src="institute-logo.png" alt="شعار المركز">
+      <img class="institute-logo" src="iso-logo.png" alt="شعار الآيزو">
     </div>
-    <h1>شهادة حضور دورة تطويرية</h1>
-    <p>(خطة التدريب التطويري)</p>
-    <p>يشهد مركز مجموعة الرواد العالمية للتدريب بأن المتدرب:</p>
-    <h2>علاء سالم بيسلم باحسين</h2>
-    <p>قد حضر الدورة التدريبية بنجاح بعنوان:</p>
-    <h2>التوعية والتعريف بنظام إدارة الجودة ISO 9001:2015</h2>
-    <p>المعتمدة برقم: 2505131215081812475753</p>
-    <p>من تاريخ 22-10-1446 هـ إلى 26-10-1446 هـ</p>
-    <img class="watermark" src="wave.png" alt="موج">
+    
+    <h1 class="certificate-title">شهادة حضور دورة تدريبية</h1>
+    <p class="certificate-text">(برنامج التدريب التطويري)</p>
+    
+    <p class="certificate-text">يشهد مركز مجموعة الرواد العالمية للتدريب بأن:</p>
+    
+    <h2 class="participant-name">علاء سالم بيسلم باحسين</h2>
+    
+    <p class="certificate-text">قد أكمل بنجاح متطلبات حضور الدورة التدريبية المعتمدة:</p>
+    
+    <h2 class="certificate-subtitle">التوعية والتعريف بنظام إدارة الجودة ISO 9001:2015</h2>
+    
+    <div class="certificate-details">
+      <p class="certificate-text">رقم الشهادة: <strong>2505131215081812475753</strong></p>
+      <p class="certificate-text">المدة: من 22-10-1446 هـ إلى 26-10-1446 هـ</p>
+    </div>
+    
+    <img class="watermark" src="watermark-pattern.png" alt="خلفية مائية">
+    
+    <div class="certificate-footer">
+      <p>جميع الحقوق محفوظة &copy; مركز مجموعة الرواد العالمية للتدريب</p>
+    </div>
   </div>
 </body>
 </html>
